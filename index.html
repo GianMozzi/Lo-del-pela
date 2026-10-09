@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lo del Pela · Restaurante</title>
+  <meta name="description" content="Lo del Pela, restaurante en Av. Larrazábal 1400. Cocina casera, porciones generosas y reservas por WhatsApp.">
+  <link rel="icon" href="assets/img/logo-transparente.png" type="assets/logo">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ====== Navegación ====== -->
+  <header>
+    <div class="wrap">
+      <a class="logo" href="#inicio">Lo del Pela</a>
+      <nav>
+        <a href="#carta">Carta</a>
+        <a href="#fotos">Platos</a>
+        <a href="#contacto">Contacto</a>
+        <a class="btn" href="#reservas">Reservar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+
+    <!-- ====== Portada ====== -->
+    <div class="hero">
+      <div class="wrap">
+        <div>
+          <h1><span>Restaurante</span>Lo del Pela</h1>
+          <p>Cocina casera, porciones generosas y mesa larga. Venite con hambre y con ganas de quedarte.</p>
+          <div class="cta">
+            <a class="btn" href="#reservas">Reservar mesa</a>
+            <a class="btn ghost" href="#carta">Ver la carta</a>
+          </div>
+        </div>
+        <div class="hero-logo">
+          <img src="assets/img/logo-transparente.png" alt="Logo de Lo del Pela: cocinero sonriente con una olla" width="720" height="720">
+        </div>
+      </div>
+    </div>
+
+    <!-- ====== Carta (se genera desde js/carta.js) ====== -->
+    <section id="carta">
+      <div class="wrap">
+        <h2>La carta</h2>
+        <p class="lead">Elegí una categoría. Consultá los precios por WhatsApp.</p>
+        <div class="tabs" id="tabs" role="tablist"></div>
+        <div class="menu" id="menu"></div>
+      </div>
+    </section>
+
+    <!-- ====== Galería ====== -->
+    <section id="fotos" style="padding-top: 0;">
+      <div class="wrap">
+        <h2>Nuestros platos</h2>
+        <p class="lead">Porciones abundantes, hechas al momento.</p>
+        <div class="gallery">
+          <img src="assets/img/plato-01.jpg" alt="Bife de chorizo con huevo frito y papas" loading="lazy">
+          <img src="assets/img/plato-02.jpg" alt="Milanesa con huevos fritos y puré" loading="lazy">
+          <img src="assets/img/plato-03.jpg" alt="Plato con tomate, albahaca y mozzarella" loading="lazy">
+          <img src="assets/img/plato-04.jpg" alt="Milanesa con calabresa y batatas fritas" loading="lazy">
+          <img src="assets/img/plato-05.jpg" alt="Salmón con salsa de verdeo y limón" loading="lazy">
+          <img src="assets/img/plato-06.jpg" alt="Milanesa con champiñones y morrones" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== Reservas ====== -->
+    <section id="reservas">
+      <div class="wrap">
+        <h2>Reservá tu mesa</h2>
+        <p class="lead">Completá los datos y te abrimos WhatsApp con el mensaje listo para enviar. Te confirmamos por ahí.</p>
+
+        <form id="reserva-form">
+          <label>Nombre
+            <input name="nombre" required autocomplete="name">
+          </label>
+          <label>Teléfono
+            <input name="tel" type="tel" required autocomplete="tel">
+          </label>
+          <label>Fecha
+            <input name="fecha" type="date" required id="fecha">
+          </label>
+          <label>Horario
+            <select name="hora" required>
+              <option value="">Elegí un horario</option>
+              <optgroup label="Mediodía">
+                <option>12:00</option>
+                <option>12:30</option>
+                <option>13:00</option>
+                <option>13:30</option>
+                <option>14:00</option>
+                <option>14:30</option>
+                <option>15:00</option>
+              </optgroup>
+              <optgroup label="Noche">
+                <option>19:30</option>
+                <option>20:00</option>
+                <option>20:30</option>
+                <option>21:00</option>
+                <option>21:30</option>
+                <option>22:00</option>
+                <option>22:30</option>
+                <option>23:00</option>
+              </optgroup>
+            </select>
+          </label>
+          <label>Personas
+            <input name="personas" type="number" min="1" max="20" value="2" required>
+          </label>
+          <label>Comentarios (opcional)
+            <input name="coment" placeholder="Cumpleaños, silla de bebé, etc.">
+          </label>
+          <button class="btn full" type="submit">Enviar reserva por WhatsApp</button>
+          <p class="note full">Para grupos de más de 12 personas, escribinos directamente.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ====== Contacto ====== -->
+    <section id="contacto">
+      <div class="wrap">
+        <h2>Contacto</h2>
+        <div class="contact">
+          <div>
+            <h3>Dónde estamos</h3>
+            <p>Av. Larrazábal 1400<br>Buenos Aires, Argentina</p>
+            <p><a id="maps-link" href="#" target="_blank" rel="noopener">Cómo llegar</a></p>
+          </div>
+          <div>
+            <h3>Horarios</h3>
+            <p>Lunes a sábados<br>9:00 a 16:00 y 19:00 a 00:00<br>Domingos cerrado</p>
+          </div>
+          <div>
+            <h3>Escribinos</h3>
+            <p>WhatsApp: <a id="wa-text" href="#" target="_blank" rel="noopener">11 5828-2817</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====== Pie de página ====== -->
+  <footer>
+    <div class="wrap foot">
+      <span>© <span id="year"></span> Gianni Mozzi. Todos los derechos reservados.</span>
+      <a class="gh" href="https://github.com/GianMozzi" target="_blank" rel="noopener" aria-label="GitHub de Gianni Mozzi">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a class="wa-float" id="wa-float" href="#" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.02 3C8.84 3 3 8.83 3 16c0 2.3.6 4.54 1.74 6.52L3 29l6.64-1.7A13 13 0 0 0 16.02 29C23.2 29 29 23.17 29 16S23.2 3 16.02 3zm0 23.8c-1.95 0-3.86-.53-5.53-1.52l-.4-.24-3.94 1.01 1.05-3.84-.26-.4A10.76 10.76 0 0 1 5.2 16c0-5.96 4.86-10.8 10.82-10.8S26.8 10.04 26.8 16 21.98 26.8 16.02 26.8zm5.93-8.08c-.32-.16-1.92-.95-2.22-1.06-.3-.1-.52-.16-.73.17-.22.32-.84 1.05-1.03 1.27-.19.21-.38.24-.7.08-.33-.16-1.38-.51-2.62-1.62-.97-.86-1.62-1.93-1.81-2.25-.19-.33-.02-.5.14-.66.15-.14.33-.38.49-.57.16-.19.22-.33.33-.54.1-.22.05-.4-.03-.57-.08-.16-.73-1.76-1-2.4-.27-.64-.54-.55-.73-.56h-.62c-.22 0-.57.08-.87.4-.3.32-1.14 1.11-1.14 2.7 0 1.6 1.17 3.14 1.33 3.36.16.21 2.3 3.5 5.57 4.92.78.34 1.38.54 1.86.69.78.25 1.49.21 2.05.13.63-.1 1.92-.78 2.19-1.54.27-.76.27-1.4.19-1.54-.08-.14-.3-.22-.62-.38z"/></svg>
+  </a>
+
+  <script src="js/config.js"></script>
+  <script src="js/carta.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
